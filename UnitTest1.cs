@@ -71,4 +71,43 @@ namespace Exercici_5_Proves_i_Refraccio
             Assert.True(result);
         }
     }
+    public class Metode3
+    {
+        [Fact]
+        public void NameAnalyserTest1()
+        {
+            var PersonaHelper = new PersonaHelper();
+            string name = "asa";
+            var result = PersonaHelper.NameAnalyser(name);
+            Assert.True(result.IsShort);
+            Assert.True(result.IsPalindrome);
+        }
+        [Fact]
+        public void NameAnalyserTest2()
+        {
+            var PersonaHelper = new PersonaHelper();
+            string name = "ase";
+            var result = PersonaHelper.NameAnalyser(name);
+            Assert.True(result.IsShort);
+            Assert.False(result.IsPalindrome);
+        }
+        [Fact]
+        public void NameAnalyserTest3()
+        {
+            var PersonaHelper = new PersonaHelper();
+            string name = "assssa";
+            var result = PersonaHelper.NameAnalyser(name);
+            Assert.False(result.IsShort);
+            Assert.True(result.IsPalindrome);
+        }
+        [Fact]
+        public void NameAnalyserTest4()
+        {
+            var PersonaHelper = new PersonaHelper();
+            string name = "asasasadasdsadwa";
+            var result = PersonaHelper.NameAnalyser(name);
+            Assert.False(result.IsShort);
+            Assert.False(result.IsPalindrome);
+        }
+    }
 }
