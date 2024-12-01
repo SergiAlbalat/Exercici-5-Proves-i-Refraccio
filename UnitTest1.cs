@@ -145,4 +145,31 @@ namespace Exercici_5_Proves_i_Refraccio
             Assert.Equal(1, result);
         }
     }
+    public class Metode5
+    {
+        [Fact]
+        public void PersonalityTest1()
+        {
+            var PersonaHelper = new PersonaHelper();
+            string preference = "matí";
+            int result = PersonaHelper.PersonalityTest(preference);
+            Assert.Equal(0, result);
+        }
+        [Fact]
+        public void PersonalityTest2()
+        {
+            var PersonaHelper = new PersonaHelper();
+            string preference = "nit";
+            int result = PersonaHelper.PersonalityTest(preference);
+            Assert.Equal(1, result);
+        }
+        [Fact]
+        public void PersonalityTest3()
+        {
+            var PersonaHelper = new PersonaHelper();
+            string preference = "nose";
+            int result = PersonaHelper.PersonalityTest(preference);
+            Assert.Equal(2, result);
+        }
+    }
 }
