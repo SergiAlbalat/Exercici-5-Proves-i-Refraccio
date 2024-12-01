@@ -110,4 +110,39 @@ namespace Exercici_5_Proves_i_Refraccio
             Assert.False(result.IsPalindrome);
         }
     }
+    public class Metode4
+    {
+        [Fact]
+        public void VerifyClourTest1()
+        {
+            var PersonaHelper = new PersonaHelper();
+            string colour = "";
+            int result = PersonaHelper.VerifyColour(colour);
+            Assert.Equal(-1, result);
+        }
+        [Fact]
+        public void VerifyClourTest2()
+        {
+            var PersonaHelper = new PersonaHelper();
+            string colour = "blau";
+            int result = PersonaHelper.VerifyColour(colour);
+            Assert.Equal(0, result);
+        }
+        [Fact]
+        public void VerifyClourTest3()
+        {
+            var PersonaHelper = new PersonaHelper();
+            string colour = "verd";
+            int result = PersonaHelper.VerifyColour(colour);
+            Assert.Equal(0, result);
+        }
+        [Fact]
+        public void VerifyClourTest4()
+        {
+            var PersonaHelper = new PersonaHelper();
+            string colour = "groc";
+            int result = PersonaHelper.VerifyColour(colour);
+            Assert.Equal(1, result);
+        }
+    }
 }
