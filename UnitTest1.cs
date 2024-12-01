@@ -1,7 +1,7 @@
 using ExerciseFive;
 namespace Exercici_5_Proves_i_Refraccio
 {
-    public class UnitTest1
+    public class Methode1
     {
         [Fact]
         public void validateAgeTest1()
@@ -50,6 +50,25 @@ namespace Exercici_5_Proves_i_Refraccio
             int age = 120;
             int result = PersonaHelper.ClassifyAge(age);
             Assert.Equal(2, result);
+        }
+    }
+    public class Metode2
+    {
+        [Fact]
+        public void IsEvenTest1()
+        {
+            var PersonaHelper = new PersonaHelper();
+            int age = 43;
+            bool result = PersonaHelper.IsEven(age);
+            Assert.False(result);
+        }
+        [Fact]
+        public void IsEvenTest2()
+        {
+            var PersonaHelper = new PersonaHelper();
+            int age = 88;
+            bool result = PersonaHelper.IsEven(age);
+            Assert.True(result);
         }
     }
 }
